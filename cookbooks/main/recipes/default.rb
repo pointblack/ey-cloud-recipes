@@ -19,6 +19,8 @@
 #uncomment to turn on memcached
 # require_recipe "memcached"
 
+require_recipe "nodejs"
+
 #uncomment to run the authorized_keys recipe
 #require_recipe "authorized_keys"
 
