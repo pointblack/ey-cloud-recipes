@@ -46,6 +46,10 @@ if node[:name] && node[:name].match(/^node_server/)
     command "ln -s /data/nodejs/#{nodejs_dir}/node /data/nodejs/node"
     not_if { FileTest.exists?("/data/nodejs/node") }
   end
-
+  
+  execute "start node server" do
+    command "/data/nodejs/#{nodejs_dir}/node /data/MTVUTT/current/node/server.js"
+    not_if { FileTest.exists?("/data/nodejs/node") }
+  end
 end
 
