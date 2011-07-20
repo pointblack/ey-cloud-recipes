@@ -1,4 +1,4 @@
-if node[:name] && node[:name].match(/^node_server/)
+if node[:name] && (node[:name].match(/^node_server/) or node[:name].match(/^node_chat_server/))
 
   nodejs_version  = "0.4.6"
   nodejs_dir      = "node-v#{nodejs_version}"
